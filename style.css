@@ -1,0 +1,145 @@
+*,
+:before,
+:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --backgound-color: #3b5249;
+    --light-bg: #519872;
+    --secondary: #a4b494;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--backgound-color);
+}
+
+.is-none {
+    display: none !important;
+}
+
+/* analog */
+.analog {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.analog-clock {
+    width: 410px;
+    height: 410px;
+    position: relative;
+    border: 4px solid var(--light-bg);
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px var(--secondary);
+}
+
+.analog-clock p {
+    font-size: 32px;
+    position: absolute;
+    color: white;
+}
+/* 12 */
+.analog-clock p:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* 3 */
+.analog-clock p:nth-child(4) {
+    top: 50%;
+    right: 1%;
+    transform: translateY(-50%);
+}
+/* 6 */
+.analog-clock p:nth-child(7) {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* 9 */
+.analog-clock p:nth-child(10) {
+    top: 50%;
+    left: 1%;
+    transform: translateY(-50%);
+}
+/* 1 */
+.analog-clock p:nth-child(2) {
+    top: 10%;
+    right: 25%;
+    transform: translateY(-50%);
+}
+/* 2 */
+.analog-clock p:nth-child(3) {
+    top: 27%;
+    right: 8%;
+    transform: translateY(-50%);
+}
+/* 4 */
+.analog-clock p:nth-child(5) {
+    top: 73%;
+    right: 8%;
+    transform: translateY(-50%);
+}
+/* 5 */
+.analog-clock p:nth-child(6) {
+    top: 90%;
+    right: 25%;
+    transform: translateY(-50%);
+}
+/* 7 */
+.analog-clock p:nth-child(8) {
+    top: 90%;
+    left: 25%;
+    transform: translateY(-50%);
+}
+/* 8 */
+.analog-clock p:nth-child(9) {
+    top: 73%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+/* 10 */
+.analog-clock p:nth-child(11) {
+    top: 27%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+/* 11 */
+.analog-clock p:nth-child(12) {
+    top: 10%;
+    left: 25%;
+    transform: translateY(-50%);
+}
+
+.analog-second,
+.analog-minute,
+.analog-hour {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -100%);
+    transform-origin: bottom;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+}
+.analog-second {
+    background-color: #96a586;
+    width: 2px;
+    height: 160px;
+}
+.analog-minute {
+    background-color: #97a38c;
+    width: 3px;
+    height: 180px;
+}
+.analog-hour {
+    background-color: #738562;
+    width: 4px;
+    height: 120px;
+}
